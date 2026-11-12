@@ -219,6 +219,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .logos li:nth-child(4n){border-right:0}
 .logos img{max-width:min(100%,170px);max-height:52px;width:auto;height:auto;opacity:.82;transition:opacity .3s}
 .logos li:hover img{opacity:1}
+.logos.venues{grid-template-columns:repeat(3,minmax(0,1fr))}
+.logos.venues li:nth-child(4n){border-right:1px solid rgba(201,162,74,.16)}
+.logos.venues li:nth-child(3n){border-right:0}
+.logos.venues img{max-width:min(100%,210px);max-height:58px}
 
 /* ---------- orçamento ---------- */
 .quote{padding-block:clamp(90px,11vw,150px)}
@@ -309,6 +313,10 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
   .logos li:nth-child(3n){border-right:1px solid rgba(201,162,74,.16)}
   .logos li:nth-child(2n){border-right:0}
   .logos img{max-height:40px;max-width:130px}
+  .logos.venues{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .logos.venues li:nth-child(3n){border-right:1px solid rgba(201,162,74,.16)}
+  .logos.venues li:nth-child(2n){border-right:0}
+  .logos.venues img{max-height:44px;max-width:140px}
   footer .wrap{grid-template-columns:minmax(0,1fr)}
   .facts div{grid-template-columns:90px minmax(0,1fr)}
   .hero .lede{font-size:17px}
@@ -552,14 +560,23 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
           <li class="rv"><img src="img/clientes/promon.png" alt="Promon" loading="lazy"></li>
           <li class="rv"><img src="img/clientes/abf.png" alt="ABF – Associação Brasileira de Franchising" loading="lazy"></li>
       </ul>
+      <h3 class="logos-label">Onde operamos</h3>
+      <ul class="logos venues">
+          <li class="rv"><img src="img/locais/sao-paulo-expo.png" alt="São Paulo Expo" loading="lazy"></li>
+          <li class="rv"><img src="img/locais/expo-center-norte.png" alt="Expo Center Norte" loading="lazy"></li>
+          <li class="rv"><img src="img/locais/distrito-anhembi.png" alt="Distrito Anhembi" loading="lazy"></li>
+          <li class="rv"><img src="img/locais/transamerica-expo.png" alt="Transamerica Expo Center" loading="lazy"></li>
+          <li class="rv"><img src="img/locais/frei-caneca.png" alt="Centro de Convenções Frei Caneca" loading="lazy"></li>
+          <li class="rv"><img src="img/locais/riocentro.png" alt="Riocentro" loading="lazy"></li>
+      </ul>
       <div class="refs-grid">
         <div class="rv">
           <h3>Agências e produtoras</h3>
           <ul class="names"><li>Lamarca</li><li>Peônia Eventos</li><li>Drusa Eventos</li><li>Keep</li><li>Libera</li></ul>
         </div>
         <div class="rv d1">
-          <h3>Onde operamos</h3>
-          <ul class="names"><li>São Paulo Expo</li><li>Expo Center Norte</li><li>Distrito Anhembi</li><li>Transamerica Expo</li><li>Centro de Convenções Frei Caneca</li><li>Riocentro</li><li>Todo o estado de SP</li></ul>
+          <h3>Também atendemos</h3>
+          <ul class="names"><li>Todo o estado de São Paulo</li><li>Rio de Janeiro e região</li><li>Espaços próprios dos clientes</li></ul>
         </div>
       </div>
     </div>
