@@ -14,12 +14,12 @@
 <link rel="icon" href="img/logo-pita.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,400..700&family=Mrs+Saint+Delafield&display=swap">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Pita Gastronomia","description":"Catering corporativo para feiras, congressos e grandes eventos de 200 a 1.500 convidados.","url":"https://www.pitagastronomia.com.br/","telephone":"+55 11 97442-1972","areaServed":["São Paulo","Rio de Janeiro"],"servesCuisine":"Catering corporativo","founder":{"@type":"Person","name":"Ricardo Andrade"},"sameAs":["https://www.instagram.com/pita.gastronomia/"]}
 </script>
 <style>
-/* Direção: cardápio impresso e salão à noite. Bodoni (didone de menu) + Jost (geométrica clássica),
+/* Direção: cardápio impresso e salão à noite. Inter em peso forte nos títulos (mesma família do site anterior),
    faixas alternando carvão e papel marfim, fotografia grande, dourado só em fios e detalhes. */
 :root{
   --ink:#14100C; --ink-2:#1C1712; --ink-3:#2A221B;
@@ -27,8 +27,8 @@
   --gold:#C9A24A; --gold-2:#E0C27A; --gold-deep:#8A6A24;
   --t-d:#EFE7DA; --t-d2:#B7AA97; --t-l:#1A1510; --t-l2:#5E5244;
   --wa:#1F8F4E;
-  --serif:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
-  --sans:'Jost', 'Futura', 'Century Gothic', 'Avenir Next', system-ui, sans-serif;
+  --serif:'Inter', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  --sans:'Inter', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
   --script:'Mrs Saint Delafield', 'Snell Roundhand', cursive;
   --wrap:1240px;
   --gut:max(24px, env(safe-area-inset-left, 0px));
@@ -40,8 +40,8 @@ body{margin:0;background:var(--ink);color:var(--t-d);font-family:var(--sans);fon
 img{max-width:100%;display:block}
 a{color:inherit}
 p{margin:0}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.04;letter-spacing:-.01em;text-wrap:balance;font-optical-sizing:auto}
-em{font-style:italic}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;line-height:1.06;letter-spacing:-.025em;text-wrap:balance;font-optical-sizing:auto}
+em{font-style:italic;font-weight:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gutr)}
 .label{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
 .paper{background:var(--paper);color:var(--t-l)}
@@ -87,7 +87,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-copy{max-width:760px;display:flex;flex-direction:column;gap:28px}
 .hero .label{color:var(--gold-2);display:flex;align-items:center;gap:16px}
 .hero .label::before{content:"";width:44px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(46px,7.4vw,108px);font-weight:400}
+.hero h1{font-size:clamp(42px,6.2vw,92px);font-weight:700;letter-spacing:-.035em}
 .hero h1 em{color:var(--gold-2)}
 .hero .lede{max-width:540px;font-size:19px;font-weight:300;color:#E6DCCB}
 .hero .ctas{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin-top:8px}
@@ -97,12 +97,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* ---------- manifesto ---------- */
 .manifesto{padding-block:clamp(90px,12vw,160px)}
 .manifesto .wrap{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(48px,7vw,110px);align-items:start}
-.manifesto .big{font-family:var(--serif);font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:-.005em}
+.manifesto .big{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,40px);line-height:1.25;letter-spacing:-.02em}
 .manifesto .big em{color:var(--gold-deep)}
 .facts{margin:0;display:flex;flex-direction:column}
 .facts div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding-block:20px;border-top:1px solid var(--rule-l)}
 .facts div:last-child{border-bottom:1px solid var(--rule-l)}
-.facts dt{font-family:var(--serif);font-size:30px;line-height:1;color:var(--gold-deep)}
+.facts dt{font-family:var(--serif);font-weight:700;font-size:26px;line-height:1.1;letter-spacing:-.02em;color:var(--gold-deep)}
 .facts dd{margin:0;font-size:15px;line-height:1.5;color:var(--t-l2)}
 
 /* ---------- frentes (interativo) ---------- */
@@ -116,7 +116,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .f-item{border-top:1px solid rgba(201,162,74,.25);padding-block:26px;cursor:pointer}
 .f-item:last-child{border-bottom:1px solid rgba(201,162,74,.25)}
 .f-item button{all:unset;display:flex;align-items:baseline;gap:22px;width:100%;cursor:pointer}
-.f-item .n{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--gold)}
+.f-item .n{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--gold)}
 .f-item h3{font-size:clamp(28px,3vw,40px);color:var(--t-d2);transition:color .3s}
 .f-item.on h3,.f-item:hover h3{color:var(--t-d)}
 .f-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s ease}
@@ -141,7 +141,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .letter h2{font-size:clamp(34px,4vw,54px)}
 .letter h2 em{color:var(--gold-deep)}
 .letter p{font-size:18px;font-weight:300;line-height:1.75;color:#3B3229}
-.letter p.first::first-letter{font-family:var(--serif);float:left;font-size:76px;line-height:.82;padding:6px 12px 0 0;color:var(--gold-deep)}
 .sign{display:flex;flex-direction:column;gap:2px;margin-top:6px}
 .sign .script{font-family:var(--script);font-size:58px;line-height:1;color:var(--ink)}
 .sign small{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--t-l2)}
@@ -158,14 +157,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .dishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px clamp(40px,7vw,96px)}
 .dish{display:flex;flex-direction:column;gap:8px}
 .dish .row{display:flex;align-items:baseline;gap:12px}
-.dish h3{font-size:24px;font-style:italic;white-space:nowrap}
+.dish h3{font-size:21px;font-weight:600;white-space:nowrap;letter-spacing:-.015em}
 .dish .dots{flex:1;border-bottom:1px dotted #B9AA90;transform:translateY(-6px);min-width:20px}
 .dish .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);white-space:nowrap}
 .dish p{font-size:15px;color:var(--t-l2);font-weight:300;max-width:46ch}
 .plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,22px);margin-top:clamp(40px,6vw,70px)}
 .plates figure{margin:0;display:flex;flex-direction:column;gap:12px}
 .plates img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.plates figcaption{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--t-l2)}
+.plates figcaption{font-size:14px;font-weight:500;color:var(--t-l2)}
 
 /* ---------- bar ---------- */
 .bar{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;isolation:isolate}
@@ -178,7 +177,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .bar h2 em{color:var(--gold-2)}
 .bar p{color:#DCD1BF;font-weight:300;font-size:18px}
 .drinks{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
-.drinks li{padding-block:12px;border-top:1px solid rgba(224,194,122,.25);font-family:var(--serif);font-size:19px}
+.drinks li{padding-block:12px;border-top:1px solid rgba(224,194,122,.25);font-size:17px;font-weight:500}
 
 /* ---------- galeria ---------- */
 .gallery-sec{padding-block:clamp(90px,11vw,150px)}
@@ -186,7 +185,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .gallery figure{margin:0;position:relative;overflow:hidden}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
 .gallery figure:hover img{transform:scale(1.04)}
-.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(0deg,rgba(14,11,8,.75),transparent);font-family:var(--serif);font-style:italic;font-size:17px;color:var(--t-d)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(0deg,rgba(14,11,8,.75),transparent);font-size:14px;font-weight:500;color:var(--t-d)}
 .g1{grid-column:1/6;grid-row:span 3}.g2{grid-column:6/10;grid-row:span 2}.g3{grid-column:10/13;grid-row:span 2}
 .g4{grid-column:6/9;grid-row:span 2}.g5{grid-column:9/13;grid-row:span 2}.g6{grid-column:1/6;grid-row:span 1}
 
@@ -194,8 +193,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .process{padding-block:clamp(90px,11vw,140px)}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,44px)}
 .step{border-top:1px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
-.step b{font-family:var(--serif);font-weight:400;font-style:italic;font-size:44px;line-height:1;color:var(--gold-deep)}
-.step h3{font-size:24px}
+.step b{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;letter-spacing:-.03em;color:var(--gold-deep)}
+.step h3{font-size:22px}
 .step p{font-size:15px;color:var(--t-l2);font-weight:300}
 
 /* ---------- final de ano ---------- */
@@ -212,7 +211,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .refs{padding-block:clamp(90px,11vw,140px);background:var(--ink)}
 .refs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,72px)}
 .refs h3{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding-bottom:18px;border-bottom:1px solid rgba(201,162,74,.3);margin-bottom:22px}
-.names{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--serif);font-size:clamp(20px,1.8vw,25px);color:var(--t-d)}
+.names{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:clamp(18px,1.5vw,21px);font-weight:500;letter-spacing:-.01em;color:var(--t-d)}
 .names li{line-height:1.3}
 
 /* ---------- orçamento ---------- */
@@ -225,7 +224,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .q-side p{color:var(--t-l2);font-weight:300;font-size:18px;max-width:420px}
 .q-contact{display:flex;flex-direction:column;gap:4px;padding-top:22px;border-top:1px solid var(--rule-l)}
 .q-contact small{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--t-l2)}
-.q-contact b{font-family:var(--serif);font-weight:400;font-size:30px;user-select:all}
+.q-contact b{font-weight:700;font-size:28px;letter-spacing:-.02em;user-select:all}
 form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 34px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field.full{grid-column:1/-1}
@@ -243,7 +242,7 @@ input::placeholder,textarea::placeholder{color:#A99C87}
 .form-foot .btn:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
 .form-foot .btn[disabled]{opacity:.6;cursor:wait}
 .done{grid-column:1/-1;display:flex;flex-direction:column;gap:18px;padding:44px 0;border-top:1px solid var(--rule-l)}
-.done h3{font-size:44px}
+.done h3{font-size:40px}
 .done p{color:var(--t-l2);max-width:460px}
 .done .btn{align-self:flex-start;background:var(--wa);border-color:var(--wa);color:#fff}
 
@@ -252,7 +251,7 @@ footer{background:var(--ink);border-top:1px solid rgba(201,162,74,.2);padding-bl
 footer .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:40px}
 footer .brandline{display:flex;flex-direction:column;gap:20px;max-width:360px}
 footer .brandline img{width:96px}
-footer .brandline p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.4;color:var(--t-d2)}
+footer .brandline p{font-size:17px;line-height:1.5;color:var(--t-d2)}
 footer h4{margin:0 0 16px;font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 footer p,footer a{font-size:15px;color:var(--t-d2);text-decoration:none;line-height:1.9}
 footer a:hover{color:var(--gold-2)}
@@ -268,7 +267,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
   .menu-btn{display:block}
   .top .btn{display:none}
   .nav.open{display:flex;position:fixed;inset:0;top:0;flex-direction:column;justify-content:center;align-items:flex-start;gap:26px;padding:0 var(--gutr) 0 var(--gut);background:var(--ink);z-index:-1}
-  .nav.open a{font-family:var(--serif);font-size:36px;letter-spacing:0;text-transform:none;opacity:1}
+  .nav.open a{font-family:var(--serif);font-weight:700;font-size:32px;letter-spacing:-.02em;text-transform:none;opacity:1}
   .manifesto .wrap,.founder .wrap,.quote .wrap{grid-template-columns:minmax(0,1fr)}
   .fronts-grid{grid-template-columns:minmax(0,1fr)}
   .f-photo{display:none}
@@ -287,7 +286,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
 @media (max-width:720px){
   body{font-size:16px}
   .dishes{grid-template-columns:minmax(0,1fr)}
-  .dish h3{white-space:normal;font-size:22px}
+  .dish h3{white-space:normal;font-size:20px}
   .plates{grid-template-columns:repeat(2,minmax(0,1fr))}
   .plates figure:nth-child(3){display:none}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}
@@ -372,7 +371,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
       <div class="fronts-grid">
         <div class="f-list" id="f-list">
           <div class="f-item on" data-i="0">
-            <button aria-expanded="true"><span class="n">i.</span><h3>Feiras e congressos</h3></button>
+            <button aria-expanded="true"><span class="n">01</span><h3>Feiras e congressos</h3></button>
             <div class="f-body"><div>
               <img class="m-img" src="img/barista.jpg" alt="Barista preparando café em balcão de atendimento">
               <p>Café, coffee break e coquetel no estande e nos intervalos, com reposição contínua no ritmo do pavilhão, do primeiro ao último dia de feira.</p>
@@ -380,7 +379,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
             </div></div>
           </div>
           <div class="f-item" data-i="1">
-            <button aria-expanded="false"><span class="n">ii.</span><h3>Eventos corporativos</h3></button>
+            <button aria-expanded="false"><span class="n">02</span><h3>Eventos corporativos</h3></button>
             <div class="f-body"><div>
               <img class="m-img" src="img/mesa.jpg" alt="Prato servido em jantar corporativo com taças de vinho">
               <p>Convenções, premiações, lançamentos e confraternizações. Jantar servido à mesa, coquetel volante ou almoço para toda a equipe.</p>
@@ -388,7 +387,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
             </div></div>
           </div>
           <div class="f-item" data-i="2">
-            <button aria-expanded="false"><span class="n">iii.</span><h3>Agências e produtoras</h3></button>
+            <button aria-expanded="false"><span class="n">03</span><h3>Agências e produtoras</h3></button>
             <div class="f-body"><div>
               <img class="m-img" src="img/networking.jpg" alt="Convidados conversando em coquetel corporativo">
               <p>Sua marca na frente, a nossa operação por trás. Cardápio alinhado ao conceito da ativação e equipe que segue o roteiro do seu evento.</p>
@@ -415,7 +414,7 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
       <div class="letter">
         <span class="label rv">Uma palavra do fundador</span>
         <h2 class="rv d1">Servir bem é uma forma de <em>respeito</em> a quem está no evento.</h2>
-        <p class="first rv d1">Comecei em eventos há mais de 25 anos e aprendi cedo que, num pavilhão lotado, ninguém tem tempo para esperar. O café precisa estar pronto quando a palestra acaba, a bandeja precisa passar na hora do brinde e o último convidado merece o mesmo prato que o primeiro.</p>
+        <p class="rv d1">Comecei em eventos há mais de 25 anos e aprendi cedo que, num pavilhão lotado, ninguém tem tempo para esperar. O café precisa estar pronto quando a palestra acaba, a bandeja precisa passar na hora do brinde e o último convidado merece o mesmo prato que o primeiro.</p>
         <p class="rv d2">A Pita nasceu para cuidar disso. O nome homenageia Francisco Pita, referência de tradição e paixão pela gastronomia, e é esse padrão que levamos a cada feira, congresso e confraternização: cardápio pensado para quem vai estar lá, equipe que conhece o ritmo do evento e uma operação que não perde o passo quando o público chega.</p>
         <p class="rv d2">Se o seu evento já tem data, eu e a minha equipe queremos conversar.</p>
         <div class="sign rv d3">
@@ -499,10 +498,10 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
         <p class="rv d1">Atendimento consultivo, com flexibilidade para ajustar a operação ao formato e ao local do evento.</p>
       </div>
       <div class="steps">
-        <div class="step rv"><b>I</b><h3>Briefing</h3><p>Público, número de convidados, local, horários e o clima que o evento precisa ter.</p></div>
-        <div class="step rv d1"><b>II</b><h3>Cardápio sob medida</h3><p>Proposta desenvolvida a partir do briefing, com opções para restrições alimentares.</p></div>
-        <div class="step rv d2"><b>III</b><h3>Planejamento</h3><p>Equipe dimensionada pelo fluxo, logística e estrutura de cozinha de apoio.</p></div>
-        <div class="step rv d3"><b>IV</b><h3>Execução</h3><p>Montagem, serviço, reposição contínua e desmontagem, com suporte no local.</p></div>
+        <div class="step rv"><b>01</b><h3>Briefing</h3><p>Público, número de convidados, local, horários e o clima que o evento precisa ter.</p></div>
+        <div class="step rv d1"><b>02</b><h3>Cardápio sob medida</h3><p>Proposta desenvolvida a partir do briefing, com opções para restrições alimentares.</p></div>
+        <div class="step rv d2"><b>03</b><h3>Planejamento</h3><p>Equipe dimensionada pelo fluxo, logística e estrutura de cozinha de apoio.</p></div>
+        <div class="step rv d3"><b>04</b><h3>Execução</h3><p>Montagem, serviço, reposição contínua e desmontagem, com suporte no local.</p></div>
       </div>
     </div>
   </section>
