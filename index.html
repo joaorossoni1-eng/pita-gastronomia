@@ -209,10 +209,16 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* ---------- clientes e locais ---------- */
 .refs{padding-block:clamp(90px,11vw,140px);background:var(--ink)}
-.refs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,72px)}
+.refs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,72px)}
 .refs h3{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding-bottom:18px;border-bottom:1px solid rgba(201,162,74,.3);margin-bottom:22px}
 .names{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:clamp(18px,1.5vw,21px);font-weight:500;letter-spacing:-.01em;color:var(--t-d)}
 .names li{line-height:1.3}
+.logos-label{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding-bottom:18px;border-bottom:1px solid rgba(201,162,74,.3);margin:0}
+.logos{list-style:none;margin:0 0 clamp(56px,7vw,88px);padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.logos li{display:flex;align-items:center;justify-content:center;height:clamp(110px,11vw,140px);padding:0 clamp(14px,2.4vw,34px);border-bottom:1px solid rgba(201,162,74,.16);border-right:1px solid rgba(201,162,74,.16)}
+.logos li:nth-child(4n){border-right:0}
+.logos img{max-width:min(100%,170px);max-height:52px;width:auto;height:auto;opacity:.82;transition:opacity .3s}
+.logos li:hover img{opacity:1}
 
 /* ---------- orçamento ---------- */
 .quote{padding-block:clamp(90px,11vw,150px)}
@@ -277,6 +283,9 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
   .season{grid-template-columns:minmax(0,1fr)}
   .season .cp{padding-left:var(--gut)}
   .refs-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .logos{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .logos li:nth-child(4n){border-right:1px solid rgba(201,162,74,.16)}
+  .logos li:nth-child(3n){border-right:0}
   .q-side{position:static}
   .portrait{max-width:440px;margin-left:18px}
   .hero-note{display:none}
@@ -295,6 +304,11 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
   .drinks{grid-template-columns:minmax(0,1fr)}
   form{grid-template-columns:minmax(0,1fr)}
   .refs-grid{grid-template-columns:minmax(0,1fr)}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .logos li{height:96px}
+  .logos li:nth-child(3n){border-right:1px solid rgba(201,162,74,.16)}
+  .logos li:nth-child(2n){border-right:0}
+  .logos img{max-height:40px;max-width:130px}
   footer .wrap{grid-template-columns:minmax(0,1fr)}
   .facts div{grid-template-columns:90px minmax(0,1fr)}
   .hero .lede{font-size:17px}
@@ -523,16 +537,27 @@ footer .legal{grid-column:1/-1;padding-top:28px;border-top:1px solid rgba(201,16
       <div class="sec-title">
         <h2 class="rv">Quem já serviu com a Pita.</h2>
       </div>
+      <h3 class="logos-label">Empresas</h3>
+      <ul class="logos">
+          <li class="rv"><img src="img/clientes/bionexo.png" alt="Bionexo" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/olympikus.png" alt="Olympikus" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/zendesk.png" alt="Zendesk" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/locaweb.png" alt="Locaweb" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/votorantim.png" alt="Votorantim" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/baxter.png" alt="Baxter" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/marsh.png" alt="Marsh" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/ultra.png" alt="Grupo Ultra" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/hillrom.png" alt="Hillrom" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/aliansce-sonae.png" alt="Aliansce Sonae" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/promon.png" alt="Promon" loading="lazy"></li>
+          <li class="rv"><img src="img/clientes/abf.png" alt="ABF – Associação Brasileira de Franchising" loading="lazy"></li>
+      </ul>
       <div class="refs-grid">
         <div class="rv">
-          <h3>Empresas</h3>
-          <ul class="names"><li>Bionexo</li><li>Olympikus</li><li>Zendesk</li><li>Locaweb</li><li>Votorantim</li><li>Baxter</li><li>Marsh</li><li>Grupo Ultra</li><li>Hill-Rom</li><li>Aliansce Sonae</li><li>Promon</li><li>ABF</li></ul>
-        </div>
-        <div class="rv d1">
           <h3>Agências e produtoras</h3>
           <ul class="names"><li>Lamarca</li><li>Peônia Eventos</li><li>Drusa Eventos</li><li>Keep</li><li>Libera</li></ul>
         </div>
-        <div class="rv d2">
+        <div class="rv d1">
           <h3>Onde operamos</h3>
           <ul class="names"><li>São Paulo Expo</li><li>Expo Center Norte</li><li>Distrito Anhembi</li><li>Transamerica Expo</li><li>Centro de Convenções Frei Caneca</li><li>Riocentro</li><li>Todo o estado de SP</li></ul>
         </div>
